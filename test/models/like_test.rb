@@ -1,20 +1,21 @@
 # == Schema Information
 #
-# Table name: articles
+# Table name: likes
 #
 #  id         :integer          not null, primary key
-#  title      :string           not null
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
+#  article_id :integer          not null
 #  user_id    :integer          not null
 #
 # Indexes
 #
-#  index_articles_on_user_id  (user_id)
+#  index_likes_on_article_id  (article_id)
+#  index_likes_on_user_id     (user_id)
 #
 require 'test_helper'
 
-class ArticleTest < ActiveSupport::TestCase
+class LikeTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end
